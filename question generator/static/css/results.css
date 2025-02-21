@@ -1,0 +1,112 @@
+/* Dark Results Theme */
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+              url('../images/dark-bg.jpg') center/cover fixed;
+  min-height: 100vh;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #e0e0e0;
+}
+
+h1 {
+  color: #00ffff;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Cyber Terminal Effect */
+ pre {
+  white-space: pre-wrap;
+  background: rgba(20, 20, 20, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 150, 255, 0.2);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #00ff88;
+  margin: 2rem auto;
+  max-width: 800px;
+  border: 1px solid rgba(0, 150, 255, 0.3);
+  position: relative;
+}
+
+/*pre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(transparent, #00ff88, transparent);
+  animation: scan 4s infinite;
+} */
+
+@keyframes scan {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+pre strong {
+  color: #00ffff;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Holographic Button */
+.btn {
+  display: block;
+  width: 200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: linear-gradient(135deg, #00ff88 0%, #00b4d8 100%);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+  letter-spacing: 2px;
+}
+
+/* Error Pulse */
+p {
+  color: #ff4d4d;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2rem;
+  background: rgba(40, 0, 0, 0.9);
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 2rem auto;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(255, 77, 77, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
+}
+
+@media (max-width: 768px) {
+  pre {
+      padding: 1.5rem;
+      margin: 1rem;
+      font-size: 1rem;
+  }
+  
+  h1 {
+      font-size: 2rem;
+  }
+}

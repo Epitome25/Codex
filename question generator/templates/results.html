@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Generated Interview Questions</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/results.css') }}"> 
+    </head>
+    <body>
+        {% if success %}
+            <h1>Interview Questions Generated</h1>
+            <pre> {{ interview_questions }} </pre>
+            <form action="/" method="GET">
+                <button type="submit" class="btn">Generate More Questions</button>
+            </form>
+        {% else %}
+            <p>{{ error }}</p>
+        {% endif %}
+    </body>
+</html>
