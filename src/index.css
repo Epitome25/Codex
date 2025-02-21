@@ -1,5 +1,6 @@
-@import "tailwindcss";
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @layer utilities {
     .bg-pattern {
       --size: 3rem;
@@ -18,3 +19,5 @@
         100% 100%;
     }
   }
+  
+  
