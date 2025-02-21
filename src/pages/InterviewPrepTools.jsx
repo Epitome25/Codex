@@ -15,7 +15,7 @@ const InterviewPrepTools = () => {
         title="Code Review"
         description="Code Review is the process of examining and improving code quality. It ensures that the code is clean, efficient, and adheres to best practices."
         image={CodeReview}
-        link="https://codebuddy-ai.netlify.app/"
+        link="http://codehirecodereview.netlify.app"
         imagePosition="left"
       />
 
@@ -31,7 +31,7 @@ const InterviewPrepTools = () => {
         title="Code IDE"
         description="Code IDEs provide tools for writing, debugging, and testing code efficiently. Popular choices include VS Code, IntelliJ IDEA, and PyCharm."
         image={CodeIDE}
-        link="https://codehirex.vercel.app/code-ide"
+        link="/code-ide"
         imagePosition="left"
       />
 
@@ -47,7 +47,7 @@ const InterviewPrepTools = () => {
         title="DSA Tracker"
         description="DSA Tracker helps monitor problem-solving progress in Data Structures and Algorithms with categorized problems and difficulty levels."
         image={DSATracker}
-        link="https://codehirex.vercel.app/dsa-basics"
+        link="/dsa-basics"
         imagePosition="left"
       />
     </div>

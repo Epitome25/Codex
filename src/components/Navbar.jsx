@@ -60,8 +60,8 @@ export default function Navbar() {
               </>
             ) : userType() === "applicant" ? (
               <>
-                <Link className="text-[#333] text-sm md:text-base font-semibold hover:opacity-60 hover:no-underline" to="/codecollab">
-                  Code Collaborators
+                <Link className="text-[#333] text-sm md:text-base font-semibold hover:opacity-60 hover:no-underline" to="/dsa-basics">
+                  DSA Tracker
                 </Link>
                 <Link className="text-[#333] text-sm md:text-base font-semibold hover:opacity-60 hover:no-underline" to="/build-resume">
                   Resume Builder
@@ -71,16 +71,18 @@ export default function Navbar() {
             ) : null
           ) : (
             <>
-              <Link className="text-[#333] text-sm md:text-base font-semibold hover:opacity-60 hover:no-underline" to="/codecollablanding">
-                Code Collaborators
-              </Link>
+              
               <Link className="text-[#333] text-sm md:text-base font-semibold hover:opacity-60 hover:no-underline" to="/interviewlanding">
                 Interview Room
               </Link>
               <Link className="text-[#333] text-sm md:text-base font-semibold hover:opacity-60 hover:no-underline" to="/build-resume">
                 Resume Builder
               </Link>
+              
               <Blog />
+              <Link className="text-[#333] text-sm md:text-base font-semibold hover:opacity-60 hover:no-underline" to="/PricingReact">
+                Subscription 
+              </Link>
             </>
           )}
         </div>
