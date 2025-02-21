@@ -38,15 +38,13 @@ import AdminJobs from "pages/admin/AdminJobs";
 import AdminSettings from "pages/admin/AdminSettings";
 import CookiePolicy from "pages/landingPage/AboutUs/CookiePolicy";
 import AdminJob from "pages/admin/AdminJob";
-import TalentPool from "pages/admin/TalentPool";
+
 import InfoRecruiter from "pages/landingPage/InfoRecruiter";
 import { Dashboard } from "pages/Admin1/Dashboard";
 import RecruiterTools from "pages/RecruiterTools";
 import ResumeBuilder from "pages/ResumeBuilder";
 
-// CodeCollab Pages
-import CodeCollabHome from "pages/CollabHome/CodeCollabHome";
-import CollabEditorPage from "pages/CollabHome/CollabEditorPage";
+
 
 // Additional Imports
 import Playground from "pages/Playground";
@@ -66,7 +64,7 @@ import Blind75List from "./pages/DSA/Blind75List.jsx";
 
 import PricingReact from "../src/pages/subscription";
 import Thankyou from "pages/Thankyou";
-import Codecollablanding from "pages/Codecollablanding";
+
 import Interviewlandingbeforesignup from "pages/InterviewLanding";
 
 export const SetPopupContext = createContext();
@@ -166,21 +164,11 @@ export default function App() {
                 element={<AdminAddJob />}
                 type={type}
               />
-              <Route
-                exact
-                path="/talent-pool"
-                element={<TalentPool />}
-                type={type}
-              />
+              
               <Route exact path="/applicant/settings" element={<Settings />} />
               <Route exact path="/admin/settings" element={<AdminSettings />} />
               <Route exact path="/logout" element={<Logout />} />
-              {/* <Route exact path="/codecollab" element={<CodeCollabHome />} /> */}
-              <Route
-                exact
-                path="/editor/:roomId"
-                element={<CollabEditorPage />}
-              />
+              
               <Route exact path="/build-resume" element={<ResumeBuilder />} />
               <Route exact path="/referrals" element={<Referrals/>} />
               <Route
@@ -201,9 +189,9 @@ export default function App() {
               <Route path="/interviewhome" element={<InterviewLanding />} />
               <Route path="/join-interview" element={<InterviewHome />} />
               <Route path="/editor-room/:roomID" element={<EditorPage />} />
-              <Route path="/codecollab" element={<CodeCollabHome />} />
+              
 
-              <Route path="/codecollablanding" element={<Codecollablanding />} />
+             
               <Route path="/interviewlanding" element={<Interviewlandingbeforesignup/>} />
                 
               <Route path="/021245" element={<Thankyou />}>
