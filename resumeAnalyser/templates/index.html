@@ -1,0 +1,213 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{{ url_for('static', filename='images/Hackathon_logo.jpg') }}" type="image/x-icon">
+    <title>Resume Parser</title>
+   
+</head>
+<body>
+    <div class="relative isolate overflow-hidden bg-gray-900 justify-center">
+        <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+            aria-hidden="true">
+            <defs>
+                <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1"
+                    patternUnits="userSpaceOnUse">
+                    <path d="M.5 200V.5H200" fill="none" />
+                </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="overflow-visible fill-gray-800/20">
+                <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+                    stroke-width="0" />
+            </svg>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
+        </svg>
+        <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
+            aria-hidden="true">
+            <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
+                style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)">
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+            <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
+                <img src="{{ url_for('static', filename='images/Hackathon_logo.jpg') }}" alt="Your Company" style="height: 80px;">
+                <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-5xl">Revolutionize Your Recruitment with Next-Gen Resume Analyzer</h1>
+                <p class="mt-6 text-lg leading-8 text-gray-300">Unlock the potential of every application with our advanced resume analyzer, designed to enhance the speed and accuracy of
+                your hiring decisions.</p>
+                <div class="mt-10 flex items-center gap-x-6">
+                <form action="/process" method="post" enctype="multipart/form-data">
+                    <div class="mt-10 flex flex-col justify-start items-start sm:flex-row sm:items-center  gap-x-6">
+                        <button type="submit"
+                            class=" my-2 bg-blue-500 px-8 rounded-2xl py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Process</button>
+                        <input type="file" name="pdf_doc" id="pdf_doc" accept=".pdf" class=" drop-shadow-md bg-white/10 font-semibold leading-6 text-gray-900 border border-blue-300 py-2 px-4 rounded-2xl block w-full text-sm text-slate-500
+                                                        file:mr-4 file:py-2 file:px-4
+                                                        file:rounded-full file:border-0
+                                                        file:text-sm file:font-semibold
+                                                        file:bg-blue-50 file:text-blue-400
+                                                        hover:file:bg-blue-100" type="file">
+                
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class=" w-screen h-full pb-8">
+            <div class="flex flex-col justify-center items-center text-white">
+                <div class=" ">
+
+                     <div id="dictionaryValues" class="border border-1 border-white max-w-7xl p-8"></div>
+          {%if data %}
+        <script>
+            function displayDictionaryValues(data) {
+                var dictionaryValuesDiv = document.getElementById("dictionaryValues");
+                var html = generateHTML(data);
+                dictionaryValuesDiv.innerHTML = html;
+            }
+
+            function generateHTML(data) {
+                var html = "";
+                var index = 1;
+                for (var key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        if (isFinite(key)) {
+                            html += "<p><strong>" + (parseInt(key) + 1) + ":</strong> ";
+                        }
+                        else {
+                            html += "<p><strong>" + key + ":</strong> ";
+                        }
+                        if (typeof data[key] === 'object') {
+                            html += generateHTML(data[key]);
+                        } else {
+                            html += data[key];
+                        }
+                        html += "</p>";
+                        index++;
+                    }
+                }
+                return html;
+            }
+            displayDictionaryValues({{ data| tojson }});
+        </script>
+        {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{{ url_for('static', filename='images/Hackathon_logo.jpg') }}" type="image/x-icon">
+    <title>Resume Parser</title>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-900 text-white">
+    <div class="flex flex-col items-center text-center max-w-3xl p-8 bg-gray-800 rounded-lg shadow-lg">
+        <img src="{{ url_for('static', filename='images/Hackathon_logo.jpg') }}" alt="Hackathon Logo" class="h-20 mb-6">
+        <h1 class="text-4xl font-bold">Revolutionize Your Recruitment with Next-Gen Resume Analyzer</h1>
+        <p class="mt-4 text-lg text-gray-300">Unlock the potential of every application with our advanced resume analyzer, designed to enhance the speed and accuracy of your hiring decisions.</p>
+        
+        <form action="/process" method="post" enctype="multipart/form-data" class="mt-6 w-full flex flex-col items-center">
+            <input type="file" name="pdf_doc" id="pdf_doc" accept=".pdf" class="file-input text-center mb-4">
+            <button type="submit" class="bg-blue-500 px-8 py-2 rounded-2xl text-white font-semibold shadow-md hover:bg-blue-400">Process</button>
+        </form>
+        
+        {% if data %}
+        <div id="dictionaryValues" class="border border-white p-6 mt-6 w-full bg-gray-700 rounded-md"></div>
+        <script>
+            function displayDictionaryValues(data) {
+                var dictionaryValuesDiv = document.getElementById("dictionaryValues");
+                var html = generateHTML(data);
+                dictionaryValuesDiv.innerHTML = html;
+            }
+
+            function generateHTML(data) {
+                var html = "";
+                for (var key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        html += `<p><strong>${key}:</strong> ${typeof data[key] === 'object' ? generateHTML(data[key]) : data[key]}</p>`;
+                    }
+                }
+                return html;
+            }
+            displayDictionaryValues({{ data| tojson }});
+        </script>
+        {% endif %}
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{{ url_for('static', filename='images/Hackathon_logo.jpg') }}" type="image/x-icon">
+    <title>Resume Parser</title>
+</head>
+<body class="bg-gradient-to-r from-yellow-500 to-orange-600 flex items-center justify-center min-h-screen px-4">
+    <div class="relative bg-white/80 backdrop-blur-md shadow-2xl rounded-2xl p-10 w-full max-w-3xl text-center border border-white/50">
+        <!-- Logo -->
+        <div class="flex justify-center">
+            <img src="{{ url_for('static', filename='images/Hackathon_logo.jpg') }}" alt="Your Company" class="h-20">
+        </div>
+
+        <!-- Title -->
+        <h1 class="mt-6 text-4xl font-extrabold text-gray-900 leading-tight">Revolutionize Your Recruitment</h1>
+        <p class="mt-3 text-lg text-gray-700 font-medium">Unlock the potential of every application with our advanced resume analyzer, designed to enhance the speed and accuracy of your hiring decisions.</p>
+        
+        <!-- Form -->
+        <div class="mt-6">
+            <form action="/process" method="post" enctype="multipart/form-data" class="space-y-4">
+                <input type="file" name="pdf_doc" id="pdf_doc" accept=".pdf" class="block w-full text-sm text-gray-900 border border-gray-300 py-2 px-4 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm">
+                <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition-all duration-300">Process</button>
+            </form>
+        </div>
+
+        <!-- Results Box -->
+        <div class="mt-8 w-full">
+            <div id="dictionaryValues" class="border border-gray-300 bg-gray-50 p-6 text-gray-900 rounded-lg shadow-md text-left"></div>
+            {% if data %}
+            <script>
+                function displayDictionaryValues(data) {
+                    var dictionaryValuesDiv = document.getElementById("dictionaryValues");
+                    var html = generateHTML(data);
+                    dictionaryValuesDiv.innerHTML = html;
+                }
+
+                function generateHTML(data) {
+                    let html = "";
+                    for (let key in data) {
+                        if (data.hasOwnProperty(key)) {
+                            html += `<p class="mb-2"><strong>${isFinite(key) ? parseInt(key) + 1 : key}:</strong> ${typeof data[key] === 'object' ? generateHTML(data[key]) : data[key]}</p>`;
+                        }
+                    }
+                    return html;
+                }
+                displayDictionaryValues({{ data | tojson }});
+            </script>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
