@@ -15,7 +15,7 @@ export default function OTPInput() {
   function resendOTP() {
     if (disable) return;
     axios
-      .post("https://codehirex.onrender.com/api/auth/send_recovery_email", {
+      .post("https://codehirexbackend.onrender.com/api/auth/send_recovery_email", {
         OTP: otp,
         recipient_email: email,
       })
