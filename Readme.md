@@ -1,3 +1,4 @@
+![Green Minimalist Video Game Developer Studio Logo](https://github.com/user-attachments/assets/06b710ff-967e-4a50-adc7-9a5b27a4bb84)
 # InterviewPrep: A Comprehensive Job and Interview Preparation Platform
 
 ## Introduction
