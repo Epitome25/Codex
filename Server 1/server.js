@@ -29,7 +29,6 @@ app.use(passportConfig.initialize());
 // Initialize routes
 initRouter(app);
 
-
 // Start server
 app.listen(port, () => {
   console.log(`Server started on port ${port}!`);
