@@ -1,6 +1,6 @@
 export const server =
   // "https://jobportal-6qtv.onrender.com/api";
-  "https://codehirex.onrender.com/api";
+  "https://codehirexbackend.onrender.com/api";
   // "http://localhost:5000/api";
 
 const apiList = {
