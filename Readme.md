@@ -2,7 +2,7 @@
 # CODEHIREX : A Comprehensive Job and Interview Preparation Platform
 
 ## Introduction
-InterviewPrep is a web-based platform designed to streamline the job application and interview process for both applicants and recruiters. It provides features like job application management, coding environment, resume generation, DSA practice, and real-time code interviews. This project is being developed as part of a hackathon.
+CodeHirex is a web-based platform designed to streamline the job application and interview process for both applicants and recruiters. It provides features like job application management, coding environment, resume generation, DSA practice, and real-time code interviews. This project is being developed as part of a hackathon.
 
 ## Features and Functionalities
 
