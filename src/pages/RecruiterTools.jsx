@@ -52,7 +52,7 @@ const RecruiterTools = () => {
 
           {/* AI Question Generator */}
           <RecruiterToolLeft
-            redirectLink={"https://code-hire-x-question-generator.onrender.com"}
+            redirectLink={"https://code-hire-x-question-generator-th7z.onrender.com"}
             title={"Question Generator"}
             desc={
               "An AI-powered tool that creates relevant and diverse questions based on given topics or content. It helps in exam preparation, interviews, and quizzes by generating insightful and structured questions efficiently."
